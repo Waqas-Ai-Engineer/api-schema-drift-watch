@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "api-schema-drift-watch"
+version = "1.0.0"
+description = "Zero-dependency CLI that detects breaking schema drift in JSON API responses"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+[project.scripts]
+drift-watch = "drift_watch.cli:main"
+
+[tool.setuptools]
+packages = ["drift_watch"]

@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.drift-watch/
+*.egg-info/
+dist/
+build/
+.venv/
+.env
