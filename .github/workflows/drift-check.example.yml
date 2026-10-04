@@ -1,0 +1,11 @@
+# Copy to drift-check.yml: nightly check of a live API against a committed baseline.
+name: API drift check
+on:
+  schedule: [{ cron: "0 6 * * *" }]
+  workflow_dispatch:
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m drift_watch check https://api.example.com/v1/users --name users --fail-on breaking
